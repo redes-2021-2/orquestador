@@ -10,7 +10,7 @@ URL_2 = config("LOCALHOST", cast=str)
 i = 0
 valor = 0
 while i < 50:
-    if :
+    if i %2 == 0:
         response = requests.post(URL_1+"/suma", json={"variable": valor})
         valor = response.json().get("variable")
         print(valor)
